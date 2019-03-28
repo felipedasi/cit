@@ -1,5 +1,8 @@
 <?php
 require 'conection.php';
+$select = $conexao->prepare("SELECT *FROM biotecnologia");
+$select->execute();
+$fecth = $select->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +43,7 @@ top:24%;
     
     </style>
           
-    <title>Document</title>
+    <title>Portal Tecnológico</title>
 </head>
 <body>
     
@@ -51,7 +54,7 @@ top:24%;
    
    
 
-        <h1 class="logo_cima">Portfólio Tecnológico<br><h5 class="logo_baixo">Coordenação de Inovação Tecnológica</h5></h1>
+        <h1 class="logo_cima">Portal Tecnológico<br><h5 class="logo_baixo">Coordenação de Inovação Tecnológica</h5></h1>
 
 
 <nav class="navbar #536dfe indigo accent-2
@@ -72,31 +75,41 @@ top:24%;
 
 
 <br><br><br>
-<div class="row">
+ <div class="row">	
+
+  <?php foreach($fecth as $produto) { 
+     echo 
+'
+
   <!--patente-->
-  <div class="col s3 m3 l3">
-    <div class="card">
+  <div class="col s6 m6 l6">
+    <div class="card large">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="materialize/img/bebedour.png">
       </div>
+
+
+
+
       <div class="card-content">
-       <h7>Card Title</h7>
+       <h6><b>'.$produto['titulo'].'</b></h6>
       
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4"><i class="material-icons right">X</i>Card Title</span>
         <p>Here is some more information about this product that is only revealed once clicked on.</p>
-      </div>
+      
     </div>
     
 
-    </div>
 <!--fim-->
+';
+?>
 
-
+    </div>
 
 </div>
-
+<?php } ?>
 <!--fim-->
 
 

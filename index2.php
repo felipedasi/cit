@@ -83,21 +83,21 @@ top:24%;
 
   <!--patente-->
   <div class="col s6 m6 l6">
-    <div class="card large">
+    <div class="card large ">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="materialize/img/bebedour.png">
+        <img class="activator" src="foto/'.$produto['nome_imagem'].'">
       </div>
 
 
 
 
       <div class="card-content">
-       <h6><b>'.$produto['titulo'].'</b></h6>
+       <h6 class="activator"><b>'.$produto['titulo'].'</b></h6>
       
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4"><i class="material-icons right">X</i>Card Title</span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">X</i>'.$produto['titulo'].'</span>
+        <p>'.$produto['resumo'].'</p>
       
     </div>
     

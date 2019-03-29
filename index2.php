@@ -40,7 +40,7 @@ top:24%;
     }
     .menu{
       position:relative;
-      top:19px;
+      top:25%;
 
     }
    .tabs .tab a{
@@ -52,37 +52,44 @@ top:24%;
         .tab_menu{
           font-size:10pt;
         }
+        .nave{
+          position:absolute;
+          top:90%;
+        }
+        .menubar{
+          position:absolute;
+          bottom:0;
+        }
     </style>
           
     <title>Portal Tecnológico</title>
 </head>
 <body>
-    
+    <div class="row">
     <div class="header_ajustavel">
-        <div class="parallax"><img class="responsve-img"src="materialize/img/header.jpg" height="370" width="100%">
-        
+  
       
+       <div class="parallax"><img class="responsve-img"src="materialize/img/header.jpg" height="370" width="100%"></div>
    
-   
 
-        <h1 class="logo_cima">Portal Tecnológico<br><h5 class="logo_baixo">Coordenação de Inovação Tecnológica</h5></h1>
-
-
-<nav class="navbar #536dfe indigo accent-2
-">
-
-  <div class="row menu ">
+        <h1 class="logo_cima">Portal Tecnológico<br></h1>
+        <nav class="navbar #536dfe indigo accent-2 menubar ">
+<div class="row menu ">
     <div class="col s12  ">
       <ul class="tabs #536dfe indigo accent-2">
         <li class="tab col s2 tab_menu"><a href="#test1">Biotecnologia</a></li>
         <li class="tab col s2"><a href="#test2">Engenharia</a></li>
-       <li class="tab col s2"><a href="#test3">Farmácia</a></li>
-       <li class="tab col s2"><a href="#test4">Química</a></li>
-       <li class="tab col s2"><a href="#test5">Outros</a></li>
+       <li class="tab col s1"><a href="#test3">Farmácia</a></li>
+       <li class="tab col s1"><a href="#test4">Química</a></li>
+       <li class="tab col s1"><a href="#test5">Outros</a></li>
       </ul>
     </div>
+    </div>
   </nav>
-      </div>
+     </div>
+  
+</div></div>
+
 
        
 <!--inicio-->

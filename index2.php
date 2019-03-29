@@ -1,8 +1,6 @@
 <?php
 require 'conection.php';
-$select = $conexao->prepare("SELECT *FROM biotecnologia");
-$select->execute();
-$fecth = $select->fetchAll();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +38,20 @@ top:24%;
       top:95%;
      
     }
-    
+    .menu{
+      position:relative;
+      top:19px;
+
+    }
+   .tabs .tab a{
+            color:#FFF;
+        }
+        .tabs .indicator {
+            background-color:#01579b;
+        } 
+        .tab_menu{
+          font-size:10pt;
+        }
     </style>
           
     <title>Portal Tecnológico</title>
@@ -59,38 +70,40 @@ top:24%;
 
 <nav class="navbar #536dfe indigo accent-2
 ">
-  </nav>
 
+  <div class="row menu ">
+    <div class="col s12  ">
+      <ul class="tabs #536dfe indigo accent-2">
+        <li class="tab col s2 tab_menu"><a href="#test1">Biotecnologia</a></li>
+        <li class="tab col s2"><a href="#test2">Engenharia</a></li>
+       <li class="tab col s2"><a href="#test3">Farmácia</a></li>
+       <li class="tab col s2"><a href="#test4">Química</a></li>
+       <li class="tab col s2"><a href="#test5">Outros</a></li>
+      </ul>
+    </div>
+  </nav>
+      </div>
 
        
-
-
-
-
-
-</div>
-     
-</div>
-
-
+<!--inicio-->
 
 <br><br><br>
- <div class="row">	
+<div class="row">	
+<div id="test1">
+  <?php   $select = $conexao->prepare("SELECT *FROM biotecnologia");
+$select->execute();
+$fecth = $select->fetchAll();
+  
+  foreach($fecth as $produto) {  ?>
+   <!--patente-->
+  <?php
+  echo 
 
-  <?php foreach($fecth as $produto) { 
-     echo 
-'
-
-  <!--patente-->
-  <div class="col s6 m6 l6">
+'  <div class="col s6 m6 l6">
     <div class="card large ">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="foto/'.$produto['nome_imagem'].'">
       </div>
-
-
-
-
       <div class="card-content">
        <h6 class="activator"><b>'.$produto['titulo'].'</b></h6>
       
@@ -100,19 +113,282 @@ top:24%;
         <p>'.$produto['resumo'].'</p>
       
     </div>
-    
+    </div>
+    </div>
+    '
 
-<!--fim-->
-';
 ?>
 
-    </div>
 
-</div>
-<?php } ?>
+
 <!--fim-->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <?php }?>
+</div>
+
+
+
+<!--fim-->
+       
+<!--inicio-->
+
+<div class="row">	
+<div id="test2">
+  <?php   $select = $conexao->prepare("SELECT *FROM engenharia");
+$select->execute();
+$fecth = $select->fetchAll();
+  
+  foreach($fecth as $produto) {  ?>
+   <!--patente-->
+  <?php
+  echo 
+
+'  <div class="col s6 m6 l6">
+    <div class="card large ">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="foto/'.$produto['nome_imagem'].'">
+      </div>
+      <div class="card-content">
+       <h6 class="activator"><b>'.$produto['titulo'].'</b></h6>
+      
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">X</i>'.$produto['titulo'].'</span>
+        <p>'.$produto['resumo'].'</p>
+      
+    </div>
+    </div>
+    </div>
+    '
+
+?>
+
+
+
+<!--fim-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <?php }?>
+</div>
+
+<!--farmacia-->
+<!--inicio-->
+
+
+<div class="row">	
+<div id="test3">
+  <?php   $select = $conexao->prepare("SELECT *FROM farmacia");
+$select->execute();
+$fecth = $select->fetchAll();
+  
+  foreach($fecth as $produto) {  ?>
+   <!--patente-->
+  <?php
+  echo 
+
+'  <div class="col s6 m6 l6">
+    <div class="card large ">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="foto/'.$produto['nome_imagem'].'">
+      </div>
+      <div class="card-content">
+       <h6 class="activator"><b>'.$produto['titulo'].'</b></h6>
+      
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">X</i>'.$produto['titulo'].'</span>
+        <p>'.$produto['resumo'].'</p>
+      
+    </div>
+    </div>
+    </div>
+    '
+
+?>
+
+
+
+<!--fim-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <?php }?>
+</div>
+
+
+
+<!--fim-->
+<!--quimica-->
+<!--inicio-->
+
+
+<div class="row">	
+<div id="test4">
+  <?php   $select = $conexao->prepare("SELECT *FROM quimica");
+$select->execute();
+$fecth = $select->fetchAll();
+  
+  foreach($fecth as $produto) {  ?>
+   <!--patente-->
+  <?php
+  echo 
+
+'  <div class="col s6 m6 l6">
+    <div class="card large ">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="foto/'.$produto['nome_imagem'].'">
+      </div>
+      <div class="card-content">
+       <h6 class="activator"><b>'.$produto['titulo'].'</b></h6>
+      
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">X</i>'.$produto['titulo'].'</span>
+        <p>'.$produto['resumo'].'</p>
+      
+    </div>
+    </div>
+    </div>
+    '
+
+?>
+
+
+
+<!--fim-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <?php }?>
+</div>
+
+
+
+<!--fim-->
+<!--farmacia-->
+<!--inicio-->
+
+
+<div class="row">	
+<div id="test4">
+  <?php   $select = $conexao->prepare("SELECT *FROM outros");
+$select->execute();
+$fecth = $select->fetchAll();
+  
+  foreach($fecth as $produto) {  ?>
+   <!--patente-->
+  <?php
+  echo 
+
+'  <div class="col s6 m6 l6">
+    <div class="card large ">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="foto/'.$produto['nome_imagem'].'">
+      </div>
+      <div class="card-content">
+       <h6 class="activator"><b>'.$produto['titulo'].'</b></h6>
+      
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">X</i>'.$produto['titulo'].'</span>
+        <p>'.$produto['resumo'].'</p>
+      
+    </div>
+    </div>
+    </div>
+    '
+
+?>
+
+
+
+<!--fim-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <?php }?>
+</div>
+
+
+
+<!--fim-->
+<!--fim-->
+
+
+</div>
 
 
 

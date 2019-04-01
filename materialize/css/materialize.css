@@ -1092,11 +1092,11 @@
 }
 
 .green {
-  background-color: #4CAF50 !important;
+  background-color: #536dfe !important;
 }
 
 .green-text {
-  color: #4CAF50 !important;
+  color: #536dfe !important;
 }
 
 .green.lighten-5 {
@@ -8091,7 +8091,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .slider {
   position: relative;
-  height: 400px;
+  height: 900px;
   width: 100%;
 }
 
@@ -8155,14 +8155,7 @@ input[type=range]:focus::-ms-fill-upper {
   z-index: 2;
 }
 
-.slider .indicators {
-  position: absolute;
-  text-align: center;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-}
+
 
 .slider .indicators .indicator-item {
   display: inline-block;
@@ -8178,7 +8171,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .slider .indicators .indicator-item.active {
-  background-color: #4CAF50;
+  background-color: rgb(83,109,254);
 }
 
 .carousel {
@@ -8250,6 +8243,18 @@ input[type=range]:focus::-ms-fill-upper {
   right: 0;
   bottom: 0;
   margin: 0;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 148px;
+    height:148px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #0000ff;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);    
 }
 
 .carousel .indicators .indicator-item {

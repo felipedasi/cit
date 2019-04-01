@@ -17,6 +17,7 @@ require 'conection.php';
   <!-- Compiled and minified JavaScript -->
   <script src="materialize/js/materialize.min.js"></script>
   <style>
+    
     .logo_cima{
 position: absolute;
 top:10%;
@@ -58,24 +59,37 @@ top:24%;
         }
         .menubar{
           position:absolute;
-          bottom:0;
+        top:90%;
         }
+
+
     </style>
           
     <title>Portal Tecnológico</title>
 </head>
 <body>
+  <style>
+  .img{
+    z-index:2;
+  }
+  </style>
     <div class="row">
-    <div class="header_ajustavel">
-  
-      
-       <div class="parallax"><img class="responsve-img"src="materialize/img/header.jpg" height="370" width="100%"></div>
+   <div class="slider">
+    <ul class="slides">
+      <li>
+        <img  class="img" src="materialize/img/header.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    
+    </ul>
    
-
-        <h1 class="logo_cima">Portal Tecnológico<br></h1>
-        <nav class="navbar #536dfe indigo accent-2 menubar ">
+      <nav class="nav-bar navbar #536dfe indigo accent-2 menubar ">
 <div class="row menu ">
-    <div class="col s12  ">
+ 
+    
       <ul class="tabs #536dfe indigo accent-2">
         <li class="tab col s2 tab_menu"><a href="#test1">Biotecnologia</a></li>
         <li class="tab col s2"><a href="#test2">Engenharia</a></li>
@@ -83,13 +97,11 @@ top:24%;
        <li class="tab col s1"><a href="#test4">Química</a></li>
        <li class="tab col s1"><a href="#test5">Outros</a></li>
       </ul>
-    </div>
+    
     </div>
   </nav>
-     </div>
-  
-</div></div>
-
+  </div>
+      
 
        
 <!--inicio-->
@@ -400,9 +412,22 @@ $fecth = $select->fetchAll();
 
 
       <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
       <script type="text/javascript" src="materialize/js/materialize.js"></script>
       <script>    $(".button-collapse").sideNav();
+
+       document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
+
+  // Or with jQuery
+
+       $('.slider').slider();
+    
+
+        
       
       </script>
      

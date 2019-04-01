@@ -69,9 +69,10 @@ top:24%;
 </head>
 <body>
   <style>
-  .img{
-    z-index:2;
-  }
+.title_portal{
+  font-family:roboto;
+
+}
   </style>
     <div class="row">
    <div class="slider">
@@ -79,8 +80,11 @@ top:24%;
       <li>
         <img  class="img" src="materialize/img/header.jpg"> <!-- random image -->
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <br><BR><br><br>
+          <div class="col s8 pull-s3">
+          <h2 class="title_portal">&nbsp;&nbsp;&nbsp;PORTAL TECNOLÓGICO</h2>
+          <h5 class=" title_portal light grey-text text-lighten-3">coordenação de inovação tecnológica</h5>
+        </div>
         </div>
       </li>
     

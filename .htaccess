@@ -1,0 +1,18 @@
+RewriteEngine on
+# BEGIN custom php.ini PHP56
+<IfModule mod_suphp.c>
+    suPHP_ConfigPath /home1/pontadof/blog.gaper.net
+</IfModule>
+# END custom php.ini
+RewriteCond %{HTTP_HOST} ^blog\.gaper\.net$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.blog\.gaper\.net$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "http\:\/\/portaltecnologicoufpel\.tk\/" [R=301,L]
+<filesMatch "\.(html|css|js)$">
+AddDefaultCharset UTF-8
+DefaultLanguage en-US
+</filesMatch>
+IndexOptions +Charset=UTF-8

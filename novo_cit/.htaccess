@@ -1,0 +1,10 @@
+# Habilitar o PHP 5.6
+AddHandler application/x-httpd-php70 .php
+<IfModule mod_suphp.c>
+suPHP_ConfigPath /home/pontadof/blog.gaper.net/novo_cit/php.ini
+</IfModule>
+
+
+ <FilesMatch ".(htm|html|css|js)$">
+ AddDefaultCharset UTF-8
+ </FilesMatch>
